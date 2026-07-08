@@ -1,0 +1,214 @@
+{% extends "base.html" %}
+
+{% block title %}
+
+Dashboard
+
+{% endblock %}
+
+{% block content %}
+
+<!-- PAGE HEADER -->
+
+<div class="d-flex justify-content-between align-items-center mb-4">
+
+    <div>
+
+        <h2 class="fw-bold">
+
+            Dashboard
+
+        </h2>
+
+        <p class="text-secondary">
+
+            Welcome back, Danu 👋
+
+        </p>
+
+    </div>
+
+</div>
+
+<!-- DASHBOARD CARDS -->
+
+<div class="row g-4">
+
+    <!-- Customer -->
+
+    <div class="card dashboard-card">
+
+        <div class="card-body">
+
+            <div class="d-flex justify-content-between">
+
+                <div>
+
+                <h6>Total Customers</h6>
+
+                <h2>0</h2>
+
+                </div>
+
+                <i class="bi bi-people fs-1 text-primary"></i>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Leads -->
+
+    <div class="card dashboard-card">
+
+        <div class="card-body">
+
+            <div class="d-flex justify-content-between">
+
+                <div>
+
+                <h6>Total Leads</h6>
+
+                <h2>0</h2>
+
+                </div>
+
+                <i class="bi bi-person-lines-fill fs-1 text-primary"></i>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Deals -->
+
+    <div class="card dashboard-card">
+
+        <div class="card-body">
+
+            <div class="d-flex justify-content-between">
+
+                <div>
+
+                <h6>Total Deals</h6>
+
+                <h2>0</h2>
+
+                </div>
+
+                <i class="bi bi-cash-stack fs-1 text-primary"></i>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Revenue -->
+
+    <div class="card dashboard-card">
+
+        <div class="card-body">
+
+            <div class="d-flex justify-content-between">
+
+                <div>
+
+                <h6>Revenue</h6>
+
+                <h2>Rp0</h2>
+
+                </div>
+
+                <i class="bi bi-graph-up-arrow fs-1 text-primary"></i>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- CHART -->
+
+<div class="card mt-4">
+
+    <div class="card-body">
+
+        <h5 class="mb-3">
+
+            Revenue Analytics
+
+        </h5>
+
+        <canvas id="revenueChart"
+                height="90"></canvas>
+
+    </div>
+
+</div>
+
+<!-- RECENT ACTIVITY -->
+
+<div class="row mt-4">
+
+    <div class="col-lg-7">
+
+        <div class="card">
+
+            <div class="card-body">
+
+                <h5>
+
+                    Recent Activities
+
+                </h5>
+
+                <hr>
+
+                <p class="text-secondary">
+
+                    No activity yet.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="col-lg-5">
+
+        <div class="card">
+
+            <div class="card-body">
+
+                <h5>
+
+                    Upcoming Tasks
+
+                </h5>
+
+                <hr>
+
+                <p class="text-secondary">
+
+                    No task scheduled.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="{{ url_for('static', filename='js/dashboard.js') }}"></script>
+
+{% endblock %}

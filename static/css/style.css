@@ -1,0 +1,133 @@
+/* ==========================
+   SMART CRM DESIGN SYSTEM
+========================== */
+
+:root{
+
+    --primary:#2563eb;
+    --secondary:#64748b;
+    --success:#16a34a;
+    --danger:#dc2626;
+    --warning:#f59e0b;
+
+    --sidebar:#1e293b;
+
+    --background:#f8fafc;
+
+    --card:#ffffff;
+
+    --text:#1e293b;
+
+    --border:#e2e8f0;
+
+}
+
+*{
+
+    margin:0;
+
+    padding:0;
+
+    box-sizing:border-box;
+
+    font-family:'Poppins',sans-serif;
+
+}
+
+body{
+
+    background:var(--background);
+
+    color:var(--text);
+
+}
+
+.card{
+
+    border:none;
+
+    border-radius:15px;
+
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+
+}
+
+.btn{
+
+    border-radius:10px;
+
+}
+
+.navbar{
+
+    height:65px;
+
+}
+
+.list-group-item{
+
+    border:none;
+
+    padding:15px 20px;
+
+    transition:.3s;
+
+}
+
+.list-group-item:hover{
+
+    padding-left:30px;
+
+}
+
+.dashboard-card{
+
+    transition:.3s;
+
+}
+
+.dashboard-card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.dashboard-card{
+
+    border-radius:16px;
+
+    transition:.3s;
+
+}
+
+.dashboard-card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.dashboard-icon{
+
+    width:60px;
+
+    height:60px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:#dbeafe;
+
+}
+
+.dashboard-icon i{
+
+    font-size:28px;
+
+    color:var(--primary);
+
+}
