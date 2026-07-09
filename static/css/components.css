@@ -1,0 +1,111 @@
+/* ==========================================
+   SMARTCRM COMPONENT LIBRARY
+========================================== */
+
+/* ===============================
+   CARD
+================================ */
+
+.crm-card{
+
+    background:var(--card-bg);
+
+    border-radius:var(--radius);
+
+    box-shadow:var(--shadow);
+
+    border:1px solid var(--border);
+
+    padding:24px;
+
+}
+
+.crm-card-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:18px;
+
+}
+
+.crm-card-title{
+
+    font-size:15px;
+
+    font-weight:600;
+
+    color:var(--text);
+
+}
+
+.crm-card-body{
+
+    width:100%;
+
+}
+
+.crm-card-footer{
+
+    margin-top:20px;
+
+}
+
+/* ===============================
+   BUTTON
+================================ */
+
+.btn-crm{
+
+    border:none;
+
+    border-radius:10px;
+
+    padding:10px 18px;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+    font-weight:500;
+
+}
+
+.btn-primary{
+
+    background:var(--primary);
+
+    color:white;
+
+}
+
+.btn-primary:hover{
+
+    background:var(--primary-hover);
+
+}
+
+.btn-secondary{
+
+    background:#E2E8F0;
+
+}
+
+.btn-success{
+
+    background:var(--success);
+
+    color:white;
+
+}
+
+.btn-danger{
+
+    background:var(--danger);
+
+    color:white;
+
+}
