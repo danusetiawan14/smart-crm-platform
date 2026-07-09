@@ -7,6 +7,8 @@
 
     width:260px;
 
+    min-height:100vh;
+
     background:var(--sidebar-bg);
 
     color:white;
@@ -16,6 +18,10 @@
     flex-direction:column;
 
     padding:20px;
+
+    position:sticky;
+
+    top:0;
 
 }
 

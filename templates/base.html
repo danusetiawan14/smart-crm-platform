@@ -40,35 +40,28 @@
 
 <body>
 
-    {% include "components/navbar.html" %}
+<div class="app-layout">
 
-    <div class="container-fluid">
+    {% include "components/sidebar.html" %}
 
-        <div class="row">
+    <div class="main-wrapper">
 
-            <div class="col-lg-2 col-md-3 p-0">
+        {% include "components/navbar.html" %}
 
-                {% include "components/sidebar.html" %}
+        <main class="content">
 
-            </div>
+            {% block content %}
+            {% endblock %}
 
-            <div class="p-4">
+        </main>
 
-                {% block content %}
-
-                {% endblock %}
-
-            </div>
-
-        </div>
+        {% include "components/footer.html" %}
 
     </div>
 
-    {% include "components/footer.html" %}
+</div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
-
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 </body>
 
