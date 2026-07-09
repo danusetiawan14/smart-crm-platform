@@ -1,40 +1,34 @@
-/* =====================================
-   SMARTCRM DESIGN SYSTEM
-   Layout
-===================================== */
+/* ==========================================
+   SMARTCRM ENTERPRISE UI
+   Layout System
+========================================== */
 
-/* ---------- Reset ---------- */
+/* ---------- RESET ---------- */
 
 *{
-
     margin:0;
-
     padding:0;
-
     box-sizing:border-box;
-
 }
 
 html,
 body{
-
     height:100%;
-
 }
 
-/* ---------- Body ---------- */
+/* ---------- BODY ---------- */
 
 body{
+
+    font-family:'Poppins',sans-serif;
 
     background:var(--background);
 
     color:var(--text);
 
-    font-family:'Poppins',sans-serif;
-
 }
 
-/* ---------- Main Layout ---------- */
+/* ---------- APPLICATION ---------- */
 
 .app-layout{
 
@@ -44,7 +38,7 @@ body{
 
 }
 
-/* ---------- Sidebar ---------- */
+/* ---------- SIDEBAR ---------- */
 
 .sidebar{
 
@@ -54,7 +48,7 @@ body{
 
 }
 
-/* ---------- Main ---------- */
+/* ---------- MAIN ---------- */
 
 .main-wrapper{
 
@@ -68,7 +62,7 @@ body{
 
 }
 
-/* ---------- Content ---------- */
+/* ---------- CONTENT ---------- */
 
 .content{
 
@@ -78,10 +72,12 @@ body{
 
 }
 
-/* ---------- Footer ---------- */
+/* ---------- FOOTER ---------- */
 
 footer{
 
-    padding:20px;
+    margin-top:auto;
+
+    padding:20px 30px;
 
 }
