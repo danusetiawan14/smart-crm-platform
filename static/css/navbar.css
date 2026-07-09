@@ -1,0 +1,118 @@
+/* ==========================================
+   SMARTCRM ENTERPRISE UI
+   Navbar
+========================================== */
+
+.top-navbar{
+
+    height:70px;
+
+    background:white;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:0 30px;
+
+    border-bottom:1px solid var(--border);
+
+}
+
+.navbar-left h3{
+
+    margin:0;
+
+    font-size:24px;
+
+    font-weight:700;
+
+}
+
+.navbar-right{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+}
+
+.search-box{
+
+    display:flex;
+
+    align-items:center;
+
+    background:#F1F5F9;
+
+    padding:10px 15px;
+
+    border-radius:12px;
+
+    width:280px;
+
+}
+
+.search-box input{
+
+    border:none;
+
+    background:transparent;
+
+    outline:none;
+
+    margin-left:10px;
+
+    width:100%;
+
+}
+
+.icon-button{
+
+    width:45px;
+
+    height:45px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#F8FAFC;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+}
+
+.icon-button:hover{
+
+    background:#E2E8F0;
+
+}
+
+.profile-menu{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    cursor:pointer;
+
+}
+
+.profile-menu img{
+
+    width:40px;
+
+    height:40px;
+
+    border-radius:50%;
+
+}
