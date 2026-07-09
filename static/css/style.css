@@ -1,11 +1,9 @@
-/* =====================================
-   SMART CRM DESIGN SYSTEM
-===================================== */
+/* SmartCRM Design System */
 
 @import url("variables.css");
 @import url("layout.css");
 @import url("sidebar.css");
 @import url("navbar.css");
-@import url("dashboard.css");
 @import url("components.css");
+@import url("dashboard.css");
 @import url("responsive.css");

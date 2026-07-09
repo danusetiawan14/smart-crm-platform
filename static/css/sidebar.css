@@ -1,0 +1,110 @@
+/* ==========================================
+   SMARTCRM ENTERPRISE UI
+   Sidebar
+========================================== */
+
+.sidebar{
+
+    width:260px;
+
+    background:var(--sidebar-bg);
+
+    color:white;
+
+    display:flex;
+
+    flex-direction:column;
+
+    padding:20px;
+
+}
+
+.sidebar-header{
+
+    margin-bottom:35px;
+
+}
+
+.sidebar-header h4{
+
+    margin-bottom:5px;
+
+    font-weight:700;
+
+}
+
+.sidebar-header small{
+
+    color:var(--sidebar-title);
+
+    line-height:1.5;
+
+}
+
+.sidebar-group{
+
+    margin-bottom:28px;
+
+}
+
+.sidebar-title{
+
+    color:var(--sidebar-title);
+
+    font-size:11px;
+
+    font-weight:600;
+
+    letter-spacing:1px;
+
+    margin-bottom:12px;
+
+}
+
+.sidebar-link{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    text-decoration:none;
+
+    color:var(--sidebar-text);
+
+    padding:12px 15px;
+
+    border-radius:10px;
+
+    transition:0.25s;
+
+    margin-bottom:4px;
+
+}
+
+.sidebar-link:hover{
+
+    background:var(--sidebar-hover);
+
+    color:white;
+
+}
+
+.sidebar-link.active{
+
+    background:var(--primary);
+
+    color:white;
+
+}
+
+.sidebar-link i{
+
+    width:20px;
+
+    text-align:center;
+
+    font-size:17px;
+
+}
