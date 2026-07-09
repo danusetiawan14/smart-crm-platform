@@ -1,0 +1,158 @@
+{% extends "base.html" %}
+
+{% block title %}
+Customers
+{% endblock %}
+
+{% block content %}
+
+<div class="d-flex justify-content-between align-items-center mb-4">
+
+    <div>
+
+        <h2 class="fw-bold">
+            Customers
+        </h2>
+
+        <p class="text-secondary">
+            Manage all customers
+        </p>
+
+    </div>
+
+    <a
+    href="{{ url_for('customer.create') }}"
+    class="btn btn-primary">
+
+    <i class="bi bi-plus-circle"></i>
+
+    Add Customer
+
+    </a>
+
+</div>
+
+<div class="crm-card">
+
+    <div class="table-responsive">
+
+        <table class="table align-middle">
+
+            <thead>
+
+                <tr>
+
+                    <th>Company</th>
+
+                    <th>Contact Person</th>
+
+                    <th>Phone</th>
+
+                    <th>Status</th>
+
+                    <th width="150">
+
+                        Action
+
+                    </th>
+
+                </tr>
+
+            </thead>
+
+            <tbody>
+
+            {% for customer in customers %}
+
+                <tr>
+
+                    <td>
+
+                        {{ customer.company_name }}
+
+                    </td>
+
+                    <td>
+
+                        {{ customer.contact_person }}
+
+                    </td>
+
+                    <td>
+
+                        {{ customer.phone }}
+
+                    </td>
+
+                    <td>
+
+                        {% if customer.status=="Active" %}
+
+                            <span class="badge bg-success">
+
+                                Active
+
+                            </span>
+
+                        {% elif customer.status=="Prospect" %}
+
+                            <span class="badge bg-warning text-dark">
+
+                                Prospect
+
+                            </span>
+
+                        {% else %}
+
+                            <span class="badge bg-secondary">
+
+                                Inactive
+
+                            </span>
+
+                        {% endif %}
+
+                    </td>
+
+                    <td>
+
+                        <button class="btn btn-sm btn-outline-primary">
+
+                            Edit
+
+                        </button>
+
+                        <button class="btn btn-sm btn-outline-danger">
+
+                            Delete
+
+                        </button>
+
+                    </td>
+
+                </tr>
+
+            {% else %}
+
+                <tr>
+
+                    <td colspan="5"
+                        class="text-center text-secondary">
+
+                        No customers found.
+
+                    </td>
+
+                </tr>
+
+            {% endfor %}
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</div>
+
+{% endblock %}
