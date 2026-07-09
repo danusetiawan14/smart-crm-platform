@@ -1,0 +1,51 @@
+/* =====================================
+   SMARTCRM DESIGN SYSTEM
+   Variables
+===================================== */
+
+:root{
+
+    /* Primary Colors */
+
+    --primary:#2563EB;
+    --primary-hover:#1D4ED8;
+
+    /* Sidebar */
+
+    --sidebar-bg:#1E293B;
+    --sidebar-hover:#334155;
+    --sidebar-text:#CBD5E1;
+    --sidebar-title:#94A3B8;
+
+    /* Background */
+
+    --background:#F8FAFC;
+
+    /* Card */
+
+    --card-bg:#FFFFFF;
+
+    /* Text */
+
+    --text:#1E293B;
+    --text-muted:#64748B;
+
+    /* Border */
+
+    --border:#E2E8F0;
+
+    /* Status */
+
+    --success:#16A34A;
+    --warning:#F59E0B;
+    --danger:#DC2626;
+
+    /* Shadow */
+
+    --shadow:0 5px 20px rgba(0,0,0,.08);
+
+    /* Radius */
+
+    --radius:16px;
+
+}

@@ -1,0 +1,87 @@
+/* =====================================
+   SMARTCRM DESIGN SYSTEM
+   Layout
+===================================== */
+
+/* ---------- Reset ---------- */
+
+*{
+
+    margin:0;
+
+    padding:0;
+
+    box-sizing:border-box;
+
+}
+
+html,
+body{
+
+    height:100%;
+
+}
+
+/* ---------- Body ---------- */
+
+body{
+
+    background:var(--background);
+
+    color:var(--text);
+
+    font-family:'Poppins',sans-serif;
+
+}
+
+/* ---------- Main Layout ---------- */
+
+.app-layout{
+
+    display:flex;
+
+    min-height:100vh;
+
+}
+
+/* ---------- Sidebar ---------- */
+
+.sidebar{
+
+    width:260px;
+
+    flex-shrink:0;
+
+}
+
+/* ---------- Main ---------- */
+
+.main-wrapper{
+
+    flex:1;
+
+    display:flex;
+
+    flex-direction:column;
+
+    min-width:0;
+
+}
+
+/* ---------- Content ---------- */
+
+.content{
+
+    flex:1;
+
+    padding:30px;
+
+}
+
+/* ---------- Footer ---------- */
+
+footer{
+
+    padding:20px;
+
+}
