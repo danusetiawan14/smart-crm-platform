@@ -116,11 +116,13 @@ Customers
 
                     <td>
 
-                        <button class="btn btn-sm btn-outline-primary">
+                        <a
+                        href="{{ url_for('customer.edit', id=customer.id) }}"
+                        class="btn btn-sm btn-outline-primary">
 
-                            Edit
+                        <i class="bi bi-pencil-square"></i>
 
-                        </button>
+                        </a>
 
                         <button class="btn btn-sm btn-outline-danger">
 

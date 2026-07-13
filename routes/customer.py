@@ -7,6 +7,10 @@ from flask import (
     flash
 )
 
+from extensions import db
+
+from models.customer import Customer
+
 from models.customer import Customer
 
 customer = Blueprint(
@@ -32,4 +36,75 @@ def create():
 
     return render_template(
         "customers/create.html"
+    )
+
+@customer.route("/customers/store", methods=["POST"])
+def store():
+
+    customer = Customer(
+
+        company_name=request.form["company_name"],
+
+        contact_person=request.form["contact_person"],
+
+        phone=request.form["phone"],
+
+        email=request.form["email"],
+
+        website=request.form["website"],
+
+        industry=request.form["industry"],
+
+        address=request.form["address"],
+
+        status=request.form["status"]
+
+    )
+
+    db.session.add(customer)
+
+    db.session.commit()
+
+    flash(
+        "Customer created successfully!",
+        "success"
+    )
+
+    return redirect(
+        url_for("customer.index")
+    )
+
+@customer.route("/customers/edit/<int:id>", methods=["GET"])
+def edit(id):
+
+    customer_data = Customer.query.get_or_404(id)
+
+    return render_template(
+        "customers/edit.html",
+        customer=customer_data
+    )
+
+@customer.route("/customers/update/<int:id>", methods=["POST"])
+def update(id):
+
+    customer_data = Customer.query.get_or_404(id)
+
+    customer_data.company_name = request.form["company_name"]
+    customer_data.contact_person = request.form["contact_person"]
+    customer_data.phone = request.form["phone"]
+    customer_data.email = request.form["email"]
+    customer_data.website = request.form["website"]
+    customer_data.industry = request.form["industry"]
+    customer_data.address = request.form["address"]
+    customer_data.status = request.form["status"]
+
+    db.session.commit()
+
+    flash(
+        "Customer updated successfully!",
+        "success"
+    )
+
+    return redirect(
+        url_for("customer.index")
     )
