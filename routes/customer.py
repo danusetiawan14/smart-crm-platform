@@ -22,7 +22,27 @@ customer = Blueprint(
 @customer.route("/customers")
 def index():
 
-    customers = Customer.query.order_by(
+    search = request.args.get("search", "")
+
+    query = Customer.query
+
+    if search:
+
+        query = query.filter(
+
+            Customer.company_name.contains(search)
+
+            |
+
+            Customer.contact_person.contains(search)
+
+            |
+
+            Customer.phone.contains(search)
+
+        )
+
+    customers = query.order_by(
         Customer.company_name
     ).all()
 

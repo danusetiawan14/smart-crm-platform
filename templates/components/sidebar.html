@@ -26,7 +26,8 @@
 
         </div>
 
-        <a href="/" class="sidebar-link active">
+        <a href="{{ url_for('main.home') }}"
+           class="sidebar-link {% if request.endpoint == 'main.home' %}active{% endif %}">
 
             <i class="bi bi-speedometer2"></i>
 
@@ -46,7 +47,8 @@
 
         </div>
 
-        <a href="#" class="sidebar-link">
+        <a href="{{ url_for('customer.index') }}"
+           class="sidebar-link {% if request.endpoint.startswith('customer.') %}active{% endif %}">
 
             <i class="bi bi-people"></i>
 

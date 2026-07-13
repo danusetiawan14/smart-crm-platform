@@ -32,6 +32,41 @@ Customers
 
 </div>
 
+<div class="crm-card mb-4">
+
+    <form method="GET">
+
+        <div class="row">
+
+            <div class="col-md-6">
+
+                <input
+                    class="form-control"
+                    name="search"
+                    placeholder="Search company, contact, phone..."
+                    value="{{ request.args.get('search','') }}">
+
+            </div>
+
+            <div class="col-md-2">
+
+                <button
+                    class="btn btn-primary">
+
+                    <i class="bi bi-search"></i>
+
+                    Search
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </form>
+
+</div>
+
 <div class="crm-card">
 
     <div class="table-responsive">
