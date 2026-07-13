@@ -108,3 +108,21 @@ def update(id):
     return redirect(
         url_for("customer.index")
     )
+
+@customer.route("/customers/delete/<int:id>", methods=["POST"])
+def delete(id):
+
+    customer = Customer.query.get_or_404(id)
+
+    db.session.delete(customer)
+
+    db.session.commit()
+
+    flash(
+        "Customer deleted successfully!",
+        "success"
+    )
+
+    return redirect(
+        url_for("customer.index")
+    )
