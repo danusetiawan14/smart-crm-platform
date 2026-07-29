@@ -229,17 +229,43 @@ Dashboard
 
                 <h5>
 
-                    Recent Activities
+                Recent Customers
 
                 </h5>
 
                 <hr>
 
-                <p class="text-secondary">
+                {% for customer in recent_customers %}
 
-                    No activity yet.
+                <div class="d-flex justify-content-between mb-3">
 
-                </p>
+                    <div>
+
+                        <strong>
+
+                            {{ customer.company_name }}
+
+                        </strong>
+
+                        <br>
+
+                        <small class="text-secondary">
+
+                            {{ customer.contact_person }}
+
+                        </small>
+
+                    </div>
+
+                    <span class="badge bg-primary">
+
+                        {{ customer.status }}
+
+                    </span>
+
+                </div>
+
+                {% endfor %}
 
             </div>
 

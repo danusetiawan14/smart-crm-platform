@@ -13,6 +13,8 @@ from models.customer import Customer
 
 from models.customer import Customer
 
+from flask_login import login_required
+
 customer = Blueprint(
     "customer",
     __name__
@@ -20,6 +22,7 @@ customer = Blueprint(
 
 
 @customer.route("/customers")
+@login_required
 def index():
 
     search = request.args.get("search", "")
@@ -52,6 +55,7 @@ def index():
     )
 
 @customer.route("/customers/create", methods=["GET"])
+@login_required
 def create():
 
     return render_template(
@@ -59,6 +63,7 @@ def create():
     )
 
 @customer.route("/customers/store", methods=["POST"])
+@login_required
 def store():
 
     customer = Customer(
@@ -95,6 +100,7 @@ def store():
     )
 
 @customer.route("/customers/edit/<int:id>", methods=["GET"])
+@login_required
 def edit(id):
 
     customer_data = Customer.query.get_or_404(id)
@@ -105,6 +111,7 @@ def edit(id):
     )
 
 @customer.route("/customers/update/<int:id>", methods=["POST"])
+@login_required
 def update(id):
 
     customer_data = Customer.query.get_or_404(id)
@@ -130,6 +137,7 @@ def update(id):
     )
 
 @customer.route("/customers/delete/<int:id>", methods=["POST"])
+@login_required
 def delete(id):
 
     customer = Customer.query.get_or_404(id)

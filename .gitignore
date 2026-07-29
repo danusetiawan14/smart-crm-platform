@@ -1,6 +1,36 @@
-venv/
+# Python
 __pycache__/
-*.pyc
-.env
+*.py[cod]
+*.pyo
+*.pyd
+
+# Virtual Environment
+venv/
+.venv/
+env/
+
+# Flask Instance
 instance/
-database.db
+
+# Environment Variables
+.env
+
+# Uploads & Exports
+uploads/
+exports/
+
+# VS Code
+.vscode/
+
+# PyCharm
+.idea/
+
+# Logs
+*.log
+
+# OS Files
+Thumbs.db
+.DS_Store
+
+# Pytest
+.pytest_cache/

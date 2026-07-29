@@ -30,7 +30,13 @@ class Customer(db.Model):
 
     owner_id = db.Column(
         db.Integer,
+        db.ForeignKey("users.id"),
         nullable=True
+    )
+
+    owner = db.relationship(
+        "User",
+        backref="customers"
     )
 
     created_at = db.Column(

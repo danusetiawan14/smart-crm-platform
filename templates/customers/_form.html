@@ -1,0 +1,156 @@
+<div class="crm-card">
+
+    <div class="row">
+
+        <div class="col-md-6 mb-3">
+
+            <label>
+
+                Company Name
+
+            </label>
+
+            <input
+                type="text"
+                name="company_name"
+                class="form-control"
+
+                value="{{ customer.company_name if customer else '' }}">
+
+        </div>
+
+        <div class="col-md-6 mb-3">
+
+            <label>
+
+                Contact Person
+
+            </label>
+
+            <input
+                type="text"
+                name="contact_person"
+                class="form-control"
+
+                value="{{ customer.contact_person if customer else '' }}">
+
+        </div>
+
+        <div class="col-md-6 mb-3">
+
+            <label>
+
+                Phone
+
+            </label>
+
+            <input
+                type="text"
+                name="phone"
+                class="form-control"
+
+                value="{{ customer.phone if customer else '' }}">
+
+        </div>
+
+        <div class="col-md-6 mb-3">
+
+            <label>
+
+                Email
+
+            </label>
+
+            <input
+                type="text"
+                name="email"
+                class="form-control"
+
+                value="{{ customer.email if customer else '' }}">
+
+        </div>
+
+        <div class="col-md-6 mb-3">
+
+            <label>
+
+                Website
+
+            </label>
+
+            <input
+                type="text"
+                name="website"
+                class="form-control"
+
+                value="{{ customer.website if customer else '' }}">
+
+        </div>
+
+        <div class="col-md-6">
+
+            <label class="form-label">
+
+                Industry
+
+            </label>
+
+            <select
+                name="industry"
+                class="form-select">
+
+                <option>
+
+                Technology
+
+                </option>
+
+                <option>
+
+                Retail
+
+                </option>
+
+                <option>
+
+                Manufacturing
+
+                </option>
+
+                <option>
+
+                Healthcare
+
+                </option>
+
+                <option>
+
+                Education
+
+                </option>
+
+            </select>
+
+        </div>
+
+        <div class="col-md-6 mb-3">
+
+            <label>
+
+                Address
+
+            </label>
+
+            <textarea
+                name="address"
+                class="form-control"
+                rows="4">{{ customer.address }}
+            </textarea>
+
+        </div>
+
+    </div>
+
+    <!-- lanjutkan semua field -->
+
+</div>

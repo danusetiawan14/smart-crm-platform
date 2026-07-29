@@ -37,6 +37,29 @@
 
     </div>
 
+    {% if current_user.role == "Owner" %}
+
+    <div class="sidebar-group">
+
+        <div class="sidebar-title">
+
+            ADMINISTRATION
+
+        </div>
+
+        <a href="{{ url_for('user.index') }}"
+           class="sidebar-link">
+
+            <i class="bi bi-people-fill"></i>
+
+            Users
+
+        </a>
+        
+    </div>
+
+    {% endif %}
+
     <!-- Sales -->
 
     <div class="sidebar-group">
@@ -140,7 +163,8 @@
 
         </a>
 
-        <a href="#" class="sidebar-link">
+        <a href="{{ url_for('auth.logout') }}"
+           class="sidebar-link">
 
             <i class="bi bi-box-arrow-right"></i>
 
